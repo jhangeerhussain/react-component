@@ -6,8 +6,7 @@ function Student(props){
             <h1>hi i am {props.studentName}</h1>
             <h1> & </h1>
             <h1> i have done my {props.education}</h1>
-            <h1>hi i am zanbish i have my intermediate</h1>
-            <h1>hi i am zahra i have my B.A</h1>
+            <hr />
         </div>
     );
 }
