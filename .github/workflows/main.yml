@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: React Component App Deployment
+name: Auto_Deploy
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -26,20 +26,20 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
+ 
 
-
+    # Runs a set of commands using the runners shell
     - name: GitHub Action for Yarn
       uses: Borales/actions-yarn@v2.3.0
       with:
         # Yarn command
         cmd: install
-
+ 
     - name: Yarn Build
       run: yarn build
-  
+
     - name: Installing Surge
       run: npm install -g surge
-
-    - name: Deploying On Surge
+    
+    - name: Deploying On surge
       run: surge ./build http://03-react-component.surge.sh/ --token ${{secrets.TOKEN}}
-      
