@@ -5,7 +5,7 @@ import Student from './Students.js';
 function App() {
   return (
     <div className='App'>
-      <Student />
+      <Student studentName="Ali Ahmad" education="B.Sc" />
     </div>
   );
 }
