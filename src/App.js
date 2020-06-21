@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
+import Student from './Students.js';
 
 function App() {
   return (
-    <h1>Hello Component</h1>
+    <div className='App'>
+      <Student />
+    </div>
   );
 }
 
